@@ -1,0 +1,310 @@
+[
+  {
+    "id": "p01",
+    "name": "Deli Glass Mug Set",
+    "subtitle": "6 clear glass mugs with handle, 240 ml each",
+    "category": "Glassware",
+    "brand": "Delisoga",
+    "price": null,
+    "image": "images/p01.jpg",
+    "details": [
+      "6 pieces",
+      "240 ml each",
+      "Model B24",
+      "Clear glass with handle"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p02",
+    "name": "Crystal Cut Jug & Goblet",
+    "subtitle": "Diamond-cut glass jug with a matching goblet",
+    "category": "Water Sets",
+    "brand": "",
+    "price": null,
+    "image": "images/p02.jpg",
+    "details": [
+      "Cut-glass pattern",
+      "Jug with handle",
+      "Matching goblet glass"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p03",
+    "name": "Electric Kettle 2.0L",
+    "subtitle": "Steel and black kettle, easy to clean",
+    "category": "Appliances",
+    "brand": "RAF",
+    "price": null,
+    "image": "images/p03.jpg",
+    "details": [
+      "2.0 litre",
+      "Easy to clean",
+      "Comes with power base"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p04",
+    "name": "Infrared Cooker 3500W",
+    "subtitle": "Ceramic-plate infrared stove with touch controls",
+    "category": "Appliances",
+    "brand": "RAF",
+    "price": null,
+    "image": "images/p04.jpg",
+    "details": [
+      "3500 W",
+      "3 years warranty (as per box)",
+      "Works with all cookware",
+      "Easy to clean"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p05",
+    "name": "Moti Ice Cream Bowl Set",
+    "subtitle": "7 pcs flower-print glass dessert set",
+    "category": "Glassware",
+    "brand": "AVC Glass Ware",
+    "price": null,
+    "image": "images/p05.jpg",
+    "details": [
+      "7 pieces",
+      "1 large bowl + 6 small cups",
+      "Flower print"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p06",
+    "name": "Glass Casserole Set of 3",
+    "subtitle": "Heat resistant round tempered glass casseroles",
+    "category": "Glassware",
+    "brand": "Higlas",
+    "price": null,
+    "image": "images/p06.jpg",
+    "details": [
+      "Set of 3",
+      "Tempered glass",
+      "Heat resistant",
+      "With lids"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p07",
+    "name": "Crunch Water Set",
+    "subtitle": "7 pcs jug and glasses in a textured design",
+    "category": "Water Sets",
+    "brand": "Red Apple",
+    "price": null,
+    "image": "images/p07.jpg",
+    "details": [
+      "7 pieces",
+      "Textured glass",
+      "Jug + goblets"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p08",
+    "name": "Double Colour Water Set",
+    "subtitle": "7 pcs jug and tumblers, BPA free",
+    "category": "Water Sets",
+    "brand": "MPA",
+    "price": null,
+    "image": "images/p08.jpg",
+    "details": [
+      "7 pieces",
+      "BPA free",
+      "Colours: yellow, red, blue, pink",
+      "Do not use on fire"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p09",
+    "name": "Romantic Water Set",
+    "subtitle": "7 pcs printed glass jug and tumblers",
+    "category": "Water Sets",
+    "brand": "Fancy Ware",
+    "price": null,
+    "image": "images/p09.jpg",
+    "details": [
+      "7 pieces",
+      "Jug + 6 glasses",
+      "Colourful circle print"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p10",
+    "name": "Sandwich Maker S-801",
+    "subtitle": "4 section sandwich maker with non-stick plates",
+    "category": "Appliances",
+    "brand": "National",
+    "price": null,
+    "image": "images/p10.jpg",
+    "details": [
+      "4 sections",
+      "Non-stick coating",
+      "Model S-801"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p11",
+    "name": "Wok Pressure Cooker 13L",
+    "subtitle": "Super National pressure cooker wok with glass lid",
+    "category": "Cookware",
+    "brand": "National",
+    "price": null,
+    "image": "images/p11.jpg",
+    "details": [
+      "13 litre",
+      "Wok shape",
+      "Glass lid included"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p12",
+    "name": "Glass Cooking Pot with Lid",
+    "subtitle": "See-through glass pot with gold-tone handles",
+    "category": "Cookware",
+    "brand": "Welldeco",
+    "price": null,
+    "image": "images/p12.jpg",
+    "details": [
+      "1 piece",
+      "Gold-tone handles",
+      "Glass lid"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p13",
+    "name": "8 Pcs Water Set with Bamboo Lid",
+    "subtitle": "Square glass jug, six mugs and a serving tray",
+    "category": "Water Sets",
+    "brand": "Welldeco",
+    "price": null,
+    "image": "images/p13.jpg",
+    "details": [
+      "8 pieces",
+      "Bamboo lid on jug",
+      "Mugs with amber handles"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p14",
+    "name": "Neverstick+ Frying Pan 20 cm",
+    "subtitle": "Super strong non-stick, easy to clean inside and out",
+    "category": "Cookware",
+    "brand": "Sonex",
+    "price": null,
+    "image": "images/p14.jpg",
+    "details": [
+      "Size 20 cm",
+      "Never Stick+ coating",
+      "Easy clean inside & outside"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p15",
+    "name": "Glass Baking Dish Set of 3",
+    "subtitle": "Rectangular glass dishes in three sizes",
+    "category": "Glassware",
+    "brand": "Delisoga",
+    "price": null,
+    "image": "images/p15.jpg",
+    "details": [
+      "3 pieces",
+      "820 / 1160 / 1900 ml",
+      "Model EQ100/L3"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p16",
+    "name": "Grooved Pressure Cooker 13L",
+    "subtitle": "Super National pressure cooker for all cooktops",
+    "category": "Cookware",
+    "brand": "National",
+    "price": null,
+    "image": "images/p16.jpg",
+    "details": [
+      "13 litre",
+      "Grooved body",
+      "Safety device against over-pressure",
+      "Suits gas, electric and ceramic"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p17",
+    "name": "4-in-1 Juicer, Blender, Dry Mill & Chopper",
+    "subtitle": "Kitchen Expert model 555N with 1000 ml glass jar",
+    "category": "Appliances",
+    "brand": "National",
+    "price": null,
+    "image": "images/p17.jpg",
+    "details": [
+      "Model 555N",
+      "10 year warranty (as per box)",
+      "1000 ml clear glass jar",
+      "Circuit breaker for motor safety"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p18",
+    "name": "De-luxe Automatic Iron",
+    "subtitle": "1000 W dry iron with non-stick sole plate",
+    "category": "Appliances",
+    "brand": "Panasonic",
+    "price": null,
+    "image": "images/p18.jpg",
+    "details": [
+      "Model NI-22AWT",
+      "1000 W, 220 V",
+      "Non-stick sole plate",
+      "Thermostat pilot lamp"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p19",
+    "name": "Ripple Vacuum Flask",
+    "subtitle": "White flask with flower print and gold rim",
+    "category": "Flasks",
+    "brand": "Alpine",
+    "price": null,
+    "image": "images/p19.jpg",
+    "details": [
+      "Vacuum flask",
+      "Flower print",
+      "Gold-line rim"
+    ],
+    "in_stock": true
+  },
+  {
+    "id": "p20",
+    "name": "2-in-1 Blender & Dry Mill",
+    "subtitle": "Blender jar plus dry mill jar, model PN-716",
+    "category": "Appliances",
+    "brand": "Panasonic",
+    "price": null,
+    "image": "images/p20.jpg",
+    "details": [
+      "Model PN-716",
+      "350 W motor",
+      "Automatic circuit breaker",
+      "5 year warranty (as per box)"
+    ],
+    "in_stock": true
+  }
+]
