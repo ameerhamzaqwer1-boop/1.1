@@ -61,10 +61,26 @@
   document.addEventListener("error", function (e) {
     var img = e.target;
     if (!img || img.tagName !== "IMG") return;
-    if (img.getAttribute("data-fb")) { giveUp(img); return; }
-    img.setAttribute("data-fb", "1");
+    var step = Number(img.getAttribute("data-fb") || 0);
     var src = img.getAttribute("src") || "";
-    loadEmbedded().then(function (map) { if (map[src]) img.src = map[src]; else giveUp(img); });
+    // Step 1: photo images/ folder mein nahi mili -> same naam repository ke main folder mein dhoondo
+    if (step === 0) {
+      img.setAttribute("data-fb", "1");
+      if (/^(https?:|data:|\/)/i.test(src) || src.indexOf("/") === -1) { img.dispatchEvent(new Event("error")); return; }
+      img.src = src.split("/").pop();
+      return;
+    }
+    // Step 2: images-data.js ki backup copy
+    if (step === 1) {
+      img.setAttribute("data-fb", "2");
+      var original = img.getAttribute("data-orig") || src;
+      loadEmbedded().then(function (map) {
+        var key = Object.keys(map).filter(function (k) { return k === original || k.split("/").pop() === original.split("/").pop(); })[0];
+        if (key) img.src = map[key]; else giveUp(img);
+      });
+      return;
+    }
+    giveUp(img);
   }, true);
 
   /* ---------- Load products ---------- */
@@ -142,7 +158,7 @@
 
   function cardHTML(p) {
     var img = p.image
-      ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy" width="440" height="550">'
+      ? '<img src="' + esc(p.image) + '" data-orig="' + esc(p.image) + '" alt="' + esc(p.name) + '" loading="lazy" width="440" height="550">'
       : '<span class="niche__blank" aria-hidden="true">' + esc(p.name.charAt(0)) + "</span>";
     var info = "";
     if (p.brand || p.details.length) {
@@ -182,7 +198,7 @@
     var pick = pref.length === 3 ? pref : [0, 1, 2].map(function (i) { return withImg[Math.floor(i * withImg.length / 3)]; });
     var cls = ["a", "b", "c"];
     $("#plates").innerHTML = pick.map(function (p, i) {
-      return '<div class="plate plate--' + cls[i] + '"><img src="' + esc(p.image) + '" alt="" loading="eager"></div>';
+      return '<div class="plate plate--' + cls[i] + '"><img src="' + esc(p.image) + '" data-orig="' + esc(p.image) + '" alt="" loading="eager"></div>';
     }).join("");
   }
 
@@ -210,7 +226,7 @@
     badge.hidden = count === 0; badge.textContent = count;
     $("#lines").innerHTML = items.map(function (x) {
       var p = x.p;
-      var im = p.image ? '<img src="' + esc(p.image) + '" alt="">' : '<span class="line__blank"></span>';
+      var im = p.image ? '<img src="' + esc(p.image) + '" data-orig="' + esc(p.image) + '" alt="">' : '<span class="line__blank"></span>';
       return '<li class="line" data-id="' + esc(p.id) + '">' + im +
         '<div><div class="line__name">' + esc(p.name) + '</div><div class="line__price">' +
         (p.price != null ? money(p.price) : "Price on WhatsApp") + "</div></div>" +
@@ -267,7 +283,7 @@
   var qvProduct = null, qvQty = 1;
   function openQuick(p) {
     qvProduct = p; qvQty = 1; $("#qvQty").textContent = 1;
-    $("#qvImg").innerHTML = p.image ? '<img src="' + esc(p.image) + '" alt="' + esc(p.name) + '">' : "";
+    $("#qvImg").innerHTML = p.image ? '<img src="' + esc(p.image) + '" data-orig="' + esc(p.image) + '" alt="' + esc(p.name) + '">' : "";
     $("#qvBrand").textContent = p.brand; $("#qvBrand").hidden = !p.brand;
     $("#qvName").textContent = p.name;
     $("#qvSub").textContent = p.subtitle; $("#qvSub").hidden = !p.subtitle;
