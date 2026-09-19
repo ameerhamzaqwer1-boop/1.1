@@ -31,6 +31,42 @@
   ["#topPhone", "#footPhone"].forEach(function (id) { $(id).textContent = S.phoneDisplay || S.whatsapp; });
   $("#year").textContent = new Date().getFullYear();
 
+  /* ---------- Image safety net ----------
+     Agar images/ folder server par upload nahi hua, to photos images-data.js se aa jati hain.
+     Woh bhi na mile to product ka pehla harf dikhaya jata hai. */
+  var defaultMark = $("#brandMark").innerHTML;
+  var embedded = null;
+  function loadEmbedded() {
+    if (!embedded) {
+      embedded = new Promise(function (res) {
+        var s = document.createElement("script");
+        s.src = "images-data.js";
+        s.onload = function () { res(window.KC_IMAGES || {}); };
+        s.onerror = function () { res({}); };
+        document.head.appendChild(s);
+      });
+    }
+    return embedded;
+  }
+  function giveUp(img) {
+    if (img.closest("#brandMark")) { $("#brandMark").innerHTML = defaultMark; return; }
+    var niche = img.closest(".niche");
+    if (niche) {
+      var b = document.createElement("span");
+      b.className = "niche__blank"; b.setAttribute("aria-hidden", "true");
+      b.textContent = (img.getAttribute("alt") || "?").charAt(0);
+      img.replaceWith(b);
+    } else { img.style.visibility = "hidden"; }
+  }
+  document.addEventListener("error", function (e) {
+    var img = e.target;
+    if (!img || img.tagName !== "IMG") return;
+    if (img.getAttribute("data-fb")) { giveUp(img); return; }
+    img.setAttribute("data-fb", "1");
+    var src = img.getAttribute("src") || "";
+    loadEmbedded().then(function (map) { if (map[src]) img.src = map[src]; else giveUp(img); });
+  }, true);
+
   /* ---------- Load products ---------- */
   function norm(p, i) {
     var d = p.details;
